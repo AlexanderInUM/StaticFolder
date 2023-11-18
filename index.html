@@ -71,7 +71,8 @@
     } else {
       if (username === "alexander" && password === "123456") {
         // 登录成功，跳转到目标页面
-        window.location.href = "https://www.baidu.com";
+        window.location.href = "./clock.html"; // 指向一个本站导航页
+        localStorage.setItem("is_authorized", true); // 用于给别的网页检测是否登录授权过
       } else {
         // 显示用户名密码错误提示
         displayElement("error", "block");
